@@ -1,0 +1,89 @@
+<!-- Exercise 7: Lab – CSS Animation (Page 75)
+Simple animation, make sure to follow the instructions.
+
+Make a square slider so that it slides from the top to the bottom and returns to its original
+position, changing background colour in the process. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 4 - exercise 7</title>
+    <style>
+
+        body {
+            background-color: seashell;
+        }
+
+        .box-container {
+            width: 50%;
+            height: 50%;
+            margin: auto;
+                }
+        .box {
+            background-color: darkblue;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+        .box {
+            animation-name: slidein;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        } @keyframes slidein {
+            from {background-color: darkblue; margin-top: 100%;}
+            50% {background-color: rgb(255, 198, 207);}
+            to {background-color: lightblue; margin-top: 0%;}
+        }
+
+        .object-sun {
+            text-align: center;
+            font-size: 75px;
+        }
+
+        .object-moon {
+            text-align: center;
+            font-size: 75px;
+        }
+
+        .object-sun {
+            animation: suntomoon 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes suntomoon {
+            0% { opacity: 1;}
+            100% { opacity: 0;}
+            }
+
+            .object-moon {
+            animation: suntomoon 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes suntomoon {
+            0% { opacity: 0;}
+            50% { opacity: 0;}
+            100% { opacity: 1;}
+            }
+
+            /* .pause {
+                animation-play-state: paused;
+            } */
+        
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        <div class="box">
+            <div class="object-sun">🌞</div>
+            <div class="object-moon">🌚</div>
+    </div>
+</body>
+<style>
+</style>
+</html>
