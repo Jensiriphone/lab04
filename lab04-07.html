@@ -11,16 +11,17 @@ position, changing background colour in the process. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lab 4 - exercise 7</title>
     <style>
-
         body {
             background-color: seashell;
+            height: 100%;
         }
 
         .box-container {
             width: 50%;
             height: 50%;
             margin: auto;
-                }
+            position: center, fixed;
+            }
         .box {
             background-color: darkblue;
             width: 200px;
@@ -34,8 +35,9 @@ position, changing background colour in the process. -->
             animation-duration: 5s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
+
         } @keyframes slidein {
-            from {background-color: darkblue; margin-top: 100%;}
+            from {background-color: darkblue; margin-top: calc(100vh - 310px);}
             50% {background-color: rgb(255, 198, 207);}
             to {background-color: lightblue; margin-top: 0%;}
         }
@@ -70,11 +72,6 @@ position, changing background colour in the process. -->
             50% { opacity: 0;}
             100% { opacity: 1;}
             }
-
-            /* .pause {
-                animation-play-state: paused;
-            } */
-        
     </style>
 </head>
 <body>
@@ -82,8 +79,7 @@ position, changing background colour in the process. -->
         <div class="box">
             <div class="object-sun">🌞</div>
             <div class="object-moon">🌚</div>
+        </div>
     </div>
 </body>
-<style>
-</style>
 </html>

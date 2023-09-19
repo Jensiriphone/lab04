@@ -2,3 +2,12 @@ Exercise 10: E-Commerce page (Page 95)
 Try to do at least the first 3 points: fetch the Fake Store product data, use templating to display it via bootstrap cards, and include a drop-down to allow users to filter the products by category.
 The remaining exercises are optional, so try them if you’re ahead of time and/or wanting a challenge.
 The first mini-project is given at the end of Module 4, so the extra time may be better spent working on your mini-project instead, OR you could choose to include even more features and extend this exercise into becoming your mini-project.
+
+Create a fake eCommerce website with the data from the Fake Store API.
+- Fetch or Axios the API data
+- Create Bootstrap cards to display the items, including the image, title, price, item description
+- Create drop down selection to choose individual product categories
+- (Optional extra 1) Create a search for item feature
+- (Optional extra 2) Add custom icons to each card (To show item category)
+- (Optional extra 3) Create EChart on separate page to display average item price from each
+category
