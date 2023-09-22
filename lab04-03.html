@@ -6,3 +6,95 @@ Ensure you do the following:
 Create a new repository
 Clone the repository locally
 Create a branch for each feature -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .calculator {
+            background: linear-gradient(pink, hotpink);
+            position: absolute;
+            margin-top: 50px;
+            margin-left: 35%;
+            padding: 100px;
+        }
+
+        #input2 {
+            padding-top: 10px;
+            font-weight: bold;
+        }
+
+        #input1 {
+            font-weight: bold;
+        }
+
+        #result {
+            padding: 20px;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <div id="input1">
+            <label class="first">First Number:</label><br>
+            <input type="number" id="num1">
+        </div>
+
+        <div id="inputop"><br>
+            <select name="operators" id="op">
+                <option value="+">&plus;</option>
+                <option value="-">&minus;</option>
+                <option value="*">&times;</option>
+                <option value="/"> &divide;</option>
+            </select>
+
+            <div id="input2">
+                <label class="second">Second Number:</label><br>
+                <input type="number" id="num2">
+            </div>
+
+            <label></label><br>
+            <button id="button" onclick="calculator()">Calculate!</button>
+
+            <div id="result"></div>
+        </div>
+        <script>
+            function calculator() {
+                let num1 = document.getElementById("num1").value;
+                let num2 = document.getElementById("num2").value;
+                let operator = document.getElementById("op").value;
+
+                let result;
+                switch (operator) {
+                    case '+':
+                        result = parseFloat(num1) + parseFloat(num2);
+                        break;
+                    case '-':
+                        result = parseFloat(num1) - parseFloat(num2);
+                        break;
+                    case '*':
+                        result = parseFloat(num1) * parseFloat(num2);
+                        break;
+                    case '/':
+                        result = parseFloat(num1) / parseFloat(num2);
+                        break;
+                    default:
+                        console.log('Bah!')
+                }
+                document.getElementById("result").innerHTML = `Result: ${result}`;
+            };
+        </script>
+</body>
+
+</html>
